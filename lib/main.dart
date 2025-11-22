@@ -52,7 +52,6 @@ class _NewsFeedPageState extends State<NewsFeedPage> {
     if (response.statusCode == 200) {
       List newData = json.decode(response.body);
 
-      // если сервер вернул пусто — данных больше нет
       if (newData.isEmpty) {
         setState(() => isLoading = false);
         return;
